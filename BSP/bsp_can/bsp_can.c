@@ -49,10 +49,10 @@ void CAN_Filter_Init(void)
     HAL_CAN_ConfigFilter(&hcan1, &can_filter_st);
     HAL_CAN_Start(&hcan1);
     HAL_CAN_ActivateNotification(&hcan1, CAN_IT_RX_FIFO0_MSG_PENDING);
-//	can_filter_st.FilterBank = 14;
-//	HAL_CAN_ConfigFilter(&hcan2, &can_filter_st);
-//	HAL_CAN_Start(&hcan2);
-//	HAL_CAN_ActivateNotification(&hcan2, CAN_IT_RX_FIFO0_MSG_PENDING);
+	  can_filter_st.FilterBank = 14;
+	  HAL_CAN_ConfigFilter(&hcan2, &can_filter_st);
+	  HAL_CAN_Start(&hcan2);
+	  HAL_CAN_ActivateNotification(&hcan2, CAN_IT_RX_FIFO0_MSG_PENDING);
   
 }
 
