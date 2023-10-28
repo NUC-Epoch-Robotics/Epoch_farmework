@@ -19,6 +19,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "can.h"
+#include "i2c.h"
 #include "usart.h"
 #include "gpio.h"
 
@@ -90,6 +91,8 @@ int main(void)
   MX_CAN1_Init();
   MX_CAN2_Init();
   MX_UART7_Init();
+  MX_I2C2_Init();
+  MX_I2C3_Init();
   /* USER CODE BEGIN 2 */
 
   /* USER CODE END 2 */
