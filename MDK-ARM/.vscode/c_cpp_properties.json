@@ -3,16 +3,17 @@
         {
             "name": "Epoch_framework",
             "includePath": [
-                "e:\\1-RC\\Epoch_framework\\Core\\Inc",
-                "e:\\1-RC\\Epoch_framework\\Drivers\\STM32F4xx_HAL_Driver\\Inc",
-                "e:\\1-RC\\Epoch_framework\\Drivers\\STM32F4xx_HAL_Driver\\Inc\\Legacy",
-                "e:\\1-RC\\Epoch_framework\\Drivers\\CMSIS\\Device\\ST\\STM32F4xx\\Include",
-                "e:\\1-RC\\Epoch_framework\\Drivers\\CMSIS\\Include",
-                "e:\\1-RC\\Epoch_framework\\BSP\\bsp_can",
-                "e:\\1-RC\\Epoch_framework\\BSP\\bsp_gpio",
-                "e:\\1-RC\\Epoch_framework\\MDK-ARM",
-                "e:\\1-RC\\Epoch_framework\\Core\\Src",
-                "e:\\1-RC\\Epoch_framework\\Drivers\\STM32F4xx_HAL_Driver\\Src"
+                "d:\\gyn\\stm32\\Epoch_framework\\Core\\Inc",
+                "d:\\gyn\\stm32\\Epoch_framework\\Drivers\\STM32F4xx_HAL_Driver\\Inc",
+                "d:\\gyn\\stm32\\Epoch_framework\\Drivers\\STM32F4xx_HAL_Driver\\Inc\\Legacy",
+                "d:\\gyn\\stm32\\Epoch_framework\\Drivers\\CMSIS\\Device\\ST\\STM32F4xx\\Include",
+                "d:\\gyn\\stm32\\Epoch_framework\\Drivers\\CMSIS\\Include",
+                "d:\\gyn\\stm32\\Epoch_framework\\BSP\\bsp_can",
+                "d:\\gyn\\stm32\\Epoch_framework\\BSP\\bsp_gpio",
+                "d:\\gyn\\stm32\\Epoch_framework\\MDK-ARM",
+                "d:\\gyn\\stm32\\Epoch_framework\\Core\\Src",
+                "d:\\gyn\\stm32\\Epoch_framework\\Drivers\\STM32F4xx_HAL_Driver\\Src",
+                "d:\\gyn\\stm32\\Epoch_framework\\BSP\\bsp_usart"
             ],
             "defines": [
                 "USE_HAL_DRIVER",
