@@ -17,6 +17,7 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "stdint.h"
+#include "can.h"
 //#include "CAN_defines.h"
 /* Exported types ------------------------------------------------------------*/
 typedef struct CAN_RX_Typedef
@@ -48,12 +49,40 @@ typedef union
 	float dataf[2];
 	
 }UnionDataType;
+
+typedef struct _
+{
+    CAN_HandleTypeDef *can_handle; // can句柄
+    CAN_TxHeaderTypeDef txconf;    // CAN报文发送配置
+    uint32_t tx_id;                // 发送id
+    uint32_t tx_mailbox;           // CAN消息填入的邮箱号
+    uint8_t tx_buff[8];            // 发送缓存,发送消息长度可以通过CANSetDLC()设定,最大为8
+    uint8_t rx_buff[8];            // 接收缓存,最大消息长度为8
+    uint8_t rx_len;                // 接收长度,可能为0-8
+    // 接收的回调函数,用于解析接收到的数据
+    void (*can_module_callback)(struct _ *); // callback needs an instance to tell among registered ones
+} CANInstance;
+
+/* CAN实例初始化结构体,将此结构体指针传入注册函数 */
+typedef struct
+{
+    CAN_HandleTypeDef *can_handle;              // can句柄
+    uint32_t tx_id;                             // 发送id
+    void (*can_module_callback)(CANInstance *); // 处理接收数据的回调函数
+} CAN_Init_Config_s;
+
 /* Exported constants --------------------------------------------------------*/
 /* Exported macro ------------------------------------------------------------*/
+
+#define DEVICE_CAN_CNT 2 //A板最多有两个can通道
 /* Exported functions ------------------------------------------------------- */
+
 void CAN_Filter_Init(void);
 
-//void CAN_Send_Packet(CAN_HandleTypeDef *hcan, CAN_TX_Typedef *tx);
+void CANFIFOxCallback(CAN_HandleTypeDef *_hcan, uint32_t fifox);
+	
+void CAN_Send_Packet(CANInstance *instance,CAN_TX_Typedef *tx);
+
 
 //void CAN_Get_Packet(CAN_HandleTypeDef *hcan, CAN_RX_Typedef *rx);
 

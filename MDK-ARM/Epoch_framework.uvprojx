@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F427xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;../BSP/bsp_can;../BSP/bsp_gpio</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;../BSP/bsp_can;../BSP/bsp_gpio;..\Moudels\DJI_motor</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -920,6 +920,13 @@
         </Group>
         <Group>
           <GroupName>Moudlue</GroupName>
+          <Files>
+            <File>
+              <FileName>DJI_motor.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Moudels\DJI_motor\DJI_motor.c</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>Application</GroupName>

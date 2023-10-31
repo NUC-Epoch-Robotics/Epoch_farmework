@@ -10,6 +10,7 @@
                 "d:\\gyn\\stm32\\Epoch_framework\\Drivers\\CMSIS\\Include",
                 "d:\\gyn\\stm32\\Epoch_framework\\BSP\\bsp_can",
                 "d:\\gyn\\stm32\\Epoch_framework\\BSP\\bsp_gpio",
+                "d:\\gyn\\stm32\\Epoch_framework\\Moudels\\DJI_motor",
                 "d:\\gyn\\stm32\\Epoch_framework\\MDK-ARM",
                 "d:\\gyn\\stm32\\Epoch_framework\\Core\\Src",
                 "d:\\gyn\\stm32\\Epoch_framework\\Drivers\\STM32F4xx_HAL_Driver\\Src",

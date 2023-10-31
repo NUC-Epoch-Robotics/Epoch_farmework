@@ -21,7 +21,7 @@
 /* Exported macro ------------------------------------------------------------*/
 
 #define USART_RXBUFF_LIMIT 256 //缓冲区最大限制
-#define DEVICE_USART_CNT 9     // A板至多分配9个串口
+#define DEVICE_USART_CNT 4     // A板至多分配4个串口
 /* Exported types ------------------------------------------------------------*/
 /*usart实例*/
 typedef struct tmp_usart
@@ -30,7 +30,6 @@ typedef struct tmp_usart
     uint8_t recv_buff_size;                // 模块接收一包数据的大小
     UART_HandleTypeDef *usart_handle;      // 实例对应的串口句柄
     void (*usart_module_callback)(struct tmp_usart *);       // 解析收到的数据的回调函数
-    void *id;                              //区分不同的串口
 } USARTInstance;
 
 /* 发送、接收模式枚举 */
@@ -48,7 +47,6 @@ typedef struct
     uint8_t recv_buff_size;                // 模块接收一包数据的大小
     UART_HandleTypeDef *usart_handle;      // 实例对应的usart_handle
     void (*usart_module_callback)(USARTInstance *);       // 解析收到的数据的回调函数
-    void *id;                              //区分不同的串口
 } USART_Init_Config_s;
 /* Exported constants --------------------------------------------------------*/
 /* Exported functions ------------------------------------------------------- */

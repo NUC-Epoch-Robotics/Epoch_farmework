@@ -18,15 +18,18 @@
 /* Includes -------------------------------------------------------------------*/
 #include "bsp_can.h"
 #include "main.h"
+#include "string.h"
 /* Private  typedef -----------------------------------------------------------*/
 /* Private  define ------------------------------------------------------------*/
 /* Private  macro -------------------------------------------------------------*/
 /* Private  variables ---------------------------------------------------------*/
 
+static uint8_t idx=0;
+static CANInstance *can_instance[DEVICE_CAN_CNT] = {NULL};
 /* Extern   variables ---------------------------------------------------------*/
+
 extern CAN_HandleTypeDef hcan1;
 extern CAN_HandleTypeDef hcan2;
-extern CAN_HandleTypeDef hcan3;
 /* Extern   function prototypes -----------------------------------------------*/
 /* Private  function prototypes -----------------------------------------------*/
 /* Private  functions ---------------------------------------------------------*/
@@ -59,27 +62,58 @@ void CAN_Filter_Init(void)
 
 /**
   * @brief          [用于ODrive通信]发送CAN数据包
-  * @param[in]      hcan:CAN句柄
+  * @param[in]      instance:CAN实例
   * @param[in]     	tx:发送数据
 	* @note					  ODrive通信库里的屎山代码
   */
-void CAN_Send_Packet(CAN_HandleTypeDef *hcan, CAN_TX_Typedef *tx)
+void CAN_Send_Packet(CANInstance *instance,CAN_TX_Typedef *tx)
 {
-	while ( !(HAL_CAN_GetTxMailboxesFreeLevel(hcan)) ){} //等待空邮箱
+	while ( !(HAL_CAN_GetTxMailboxesFreeLevel(instance->can_handle)) ){} //等待空邮箱
 
-	uint32_t send_mail_box;
-	static CAN_TxHeaderTypeDef  chassis_tx_message;
+  //目前只用标准帧、数据帧、长度为8
+  instance->txconf.StdId=tx->ID;
+  instance->txconf.IDE=CAN_ID_STD;
+  instance->txconf.RTR=CAN_RTR_DATA;
+  instance->txconf.DLC=0x08;
 
-	chassis_tx_message.StdId = tx->ID;
-	chassis_tx_message.IDE = tx->id_type;
-	chassis_tx_message.RTR = tx->frame_type;
-	chassis_tx_message.DLC = tx->data_length;
+	HAL_CAN_AddTxMessage(instance->can_handle, &instance->txconf, tx->data, &instance->tx_mailbox);
+}
 
-	HAL_CAN_AddTxMessage(hcan, &chassis_tx_message, tx->data, &send_mail_box);
+/**
+  * @brief          fifo接收中断
+  * @param[in]      _hcan:CAN实例
+  * @param[in]     	fifox:fifo0 或 fifo1
+  */
+void CANFIFOxCallback(CAN_HandleTypeDef *_hcan, uint32_t fifox)
+{
+    static CAN_RxHeaderTypeDef rxconf; 
+    uint8_t can_rx_buff[8];
 
+    HAL_CAN_GetRxMessage(_hcan, fifox, &rxconf, can_rx_buff); // 从FIFO中获取数据
+    for (uint8_t i = 0; i < idx; ++i)
+    { 
+      // 两者相等说明这是要找的实例
+      if (_hcan == can_instance[i]->can_handle && can_instance[i]->can_module_callback != NULL)
+      {
+            can_instance[i]->rx_len = rxconf.DLC;                      // 保存接收到的数据长度
+            memcpy(can_instance[i]->rx_buff, can_rx_buff, rxconf.DLC); // 消息拷贝到对应实例
+            can_instance[i]->can_module_callback(can_instance[i]);     // 触发回调进行数据解析和处理
+          return;
+      }
+    }
+    
 }
 
 
+void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan)
+{
+  CANFIFOxCallback(hcan,CAN_RX_FIFO0);
+}
+
+void HAL_CAN_RxFifo1MsgPendingCallback(CAN_HandleTypeDef *hcan)
+{
+  CANFIFOxCallback(hcan,CAN_RX_FIFO1);
+}
 /**
   * @brief          [用于ODrive通信]获取CAN数据包，在can中断中调用
   * @param[in]      hcan:CAN句柄
