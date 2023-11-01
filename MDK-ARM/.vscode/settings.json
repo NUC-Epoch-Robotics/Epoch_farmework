@@ -6,6 +6,8 @@
         "usart.h": "c",
         "string.h": "c",
         "main.h": "c",
-        "bsp_can.h": "c"
+        "bsp_can.h": "c",
+        "dji_motor.h": "c",
+        "stdint.h": "c"
     }
 }

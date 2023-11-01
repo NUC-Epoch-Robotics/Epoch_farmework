@@ -19,6 +19,7 @@
 #include "bsp_can.h"
 #include "main.h"
 #include "string.h"
+#include "stdlib.h"
 /* Private  typedef -----------------------------------------------------------*/
 /* Private  define ------------------------------------------------------------*/
 /* Private  macro -------------------------------------------------------------*/
@@ -33,6 +34,32 @@ extern CAN_HandleTypeDef hcan2;
 /* Extern   function prototypes -----------------------------------------------*/
 /* Private  function prototypes -----------------------------------------------*/
 /* Private  functions ---------------------------------------------------------*/
+
+/**
+  * @brief          注册CAN实例
+  * @param[in]      instance:CAN实例
+  * @param[in]     	tx:发送数据
+	* @note					  ODrive通信库里的屎山代码
+  */
+CANInstance *CANRegister(CAN_Init_Config_s *init_config)
+{
+    if(idx > DEVICE_CAN_CNT)//定义实例过多
+    {
+      return NULL;
+    }
+
+    CANInstance *instance = (CANInstance *)malloc(sizeof(CANInstance));
+    memset(instance, 0, sizeof(CANInstance));
+
+    instance->can_handle = init_config->can_handle;
+    instance->tx_id=init_config->tx_id;
+    instance->can_module_callback = init_config->can_module_callback;
+    instance->id=init_config->id;
+
+    can_instance[idx++]=instance;
+
+    return instance;
+}
 /**
   * @brief          CAN初始化，在main函数中调用
   */
@@ -61,28 +88,26 @@ void CAN_Filter_Init(void)
 
 
 /**
-  * @brief          [用于ODrive通信]发送CAN数据包
+  * @brief          发送CAN数据包
   * @param[in]      instance:CAN实例
-  * @param[in]     	tx:发送数据
-	* @note					  ODrive通信库里的屎山代码
   */
-void CAN_Send_Packet(CANInstance *instance,CAN_TX_Typedef *tx)
+void CAN_Send_Packet(CANInstance *instance)
 {
 	while ( !(HAL_CAN_GetTxMailboxesFreeLevel(instance->can_handle)) ){} //等待空邮箱
 
   //目前只用标准帧、数据帧、长度为8
-  instance->txconf.StdId=tx->ID;
+  instance->txconf.StdId=instance->tx_id;
   instance->txconf.IDE=CAN_ID_STD;
   instance->txconf.RTR=CAN_RTR_DATA;
   instance->txconf.DLC=0x08;
 
-	HAL_CAN_AddTxMessage(instance->can_handle, &instance->txconf, tx->data, &instance->tx_mailbox);
+	HAL_CAN_AddTxMessage(instance->can_handle, &instance->txconf, instance->tx_buff, &instance->tx_mailbox);
 }
 
 /**
   * @brief          fifo接收中断
-  * @param[in]      _hcan:CAN实例
-  * @param[in]     	fifox:fifo0 或 fifo1
+  * @param[in]      _hcan CAN实例
+  * @param[in]     	fifox fifo0 或 fifo1
   */
 void CANFIFOxCallback(CAN_HandleTypeDef *_hcan, uint32_t fifox)
 {
@@ -98,6 +123,7 @@ void CANFIFOxCallback(CAN_HandleTypeDef *_hcan, uint32_t fifox)
             can_instance[i]->rx_len = rxconf.DLC;                      // 保存接收到的数据长度
             memcpy(can_instance[i]->rx_buff, can_rx_buff, rxconf.DLC); // 消息拷贝到对应实例
             can_instance[i]->can_module_callback(can_instance[i]);     // 触发回调进行数据解析和处理
+            can_instance[i]->rxconf=rxconf;
           return;
       }
     }

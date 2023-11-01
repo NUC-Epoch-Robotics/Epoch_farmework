@@ -59,8 +59,10 @@ typedef struct _
     uint8_t tx_buff[8];            // 发送缓存,发送消息长度可以通过CANSetDLC()设定,最大为8
     uint8_t rx_buff[8];            // 接收缓存,最大消息长度为8
     uint8_t rx_len;                // 接收长度,可能为0-8
+    CAN_RxHeaderTypeDef rxconf;   //CAN报文接收配置
     // 接收的回调函数,用于解析接收到的数据
-    void (*can_module_callback)(struct _ *); // callback needs an instance to tell among registered ones
+    void (*can_module_callback)(struct _ *); // 处理接收数据的回调函数
+    void *id;                      //区分不同的can实例，module层用不同id选择操控的电机
 } CANInstance;
 
 /* CAN实例初始化结构体,将此结构体指针传入注册函数 */
@@ -69,6 +71,7 @@ typedef struct
     CAN_HandleTypeDef *can_handle;              // can句柄
     uint32_t tx_id;                             // 发送id
     void (*can_module_callback)(CANInstance *); // 处理接收数据的回调函数
+    void *id ;                       //区分不同的can实例，module层用不同id选择操控的电机
 } CAN_Init_Config_s;
 
 /* Exported constants --------------------------------------------------------*/
@@ -77,11 +80,13 @@ typedef struct
 #define DEVICE_CAN_CNT 2 //A板最多有两个can通道
 /* Exported functions ------------------------------------------------------- */
 
+CANInstance *CANRegister(CAN_Init_Config_s *init_config);
+
 void CAN_Filter_Init(void);
 
 void CANFIFOxCallback(CAN_HandleTypeDef *_hcan, uint32_t fifox);
 	
-void CAN_Send_Packet(CANInstance *instance,CAN_TX_Typedef *tx);
+void CAN_Send_Packet(CANInstance *instance);
 
 
 //void CAN_Get_Packet(CAN_HandleTypeDef *hcan, CAN_RX_Typedef *rx);
