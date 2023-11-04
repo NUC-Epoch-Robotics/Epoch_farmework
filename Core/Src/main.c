@@ -25,7 +25,9 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "DJI_motor.h"
+#include "bsp_can.h"
+#include "usart.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -57,7 +59,8 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
+//Motor_Init_Config_s motor_init_config_test;
+//DJIMotorInstance *motor_instance_test;
 /* USER CODE END 0 */
 
 /**
@@ -94,13 +97,24 @@ int main(void)
   MX_I2C2_Init();
   MX_I2C3_Init();
   /* USER CODE BEGIN 2 */
+  /*测试代码*/
+//  CAN_Filter_Init();
+//  
+//  motor_init_config_test.motor_type=M3508;
+//  motor_init_config_test.can_init_config.can_handle=&hcan1;
+//  motor_init_config_test.can_init_config.tx_id=CAN_3508_M2_ID;
 
+//  
+//  motor_instance_test=DJI_Motor_init(&motor_init_config_test);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+//		HAL_GPIO_TogglePin(LED_GPIO_Port,LED_Pin);
+//    CAN_cmd_chassis(motor_instance_test,1500,1500,1500,1500);
+//    HAL_Delay(100);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

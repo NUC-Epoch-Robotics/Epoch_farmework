@@ -18,8 +18,8 @@
 /* Private  macro -------------------------------------------------------------*/
 /* Private  variables ---------------------------------------------------------*/
 
-static uint8_t idx = 0;
-static DJIMotorInstance *DJI_motor_instance[DJI_MOTOR_CNT] = {NULL}; 
+//static uint8_t idx = 0;
+//static DJIMotorInstance *DJI_motor_instance[DJI_MOTOR_CNT] = {NULL}; 
 /* Extern   variables ---------------------------------------------------------*/
 /* Extern   function prototypes -----------------------------------------------*/
 /* Private  function prototypes -----------------------------------------------*/
@@ -49,6 +49,7 @@ void Decode_Motor_Data(CANInstance *can_instance)
   * @brief  电机初始化
   * @param DJI_motor_config 初始化结构体
   * @retval 电机实例
+  * @note 使用该函数应该提前给DJI_motor_config中motor_type以及can_handle、tx_id赋值
   */
 DJIMotorInstance *DJI_Motor_init(Motor_Init_Config_s *DJI_motor_config)
 {
@@ -58,9 +59,10 @@ DJIMotorInstance *DJI_Motor_init(Motor_Init_Config_s *DJI_motor_config)
   instance->motor_type = DJI_motor_config->motor_type; 
 
   DJI_motor_config->can_init_config.can_module_callback= Decode_Motor_Data;
+  DJI_motor_config->can_init_config.id=instance;
   instance->motor_can_instance=CANRegister(&DJI_motor_config->can_init_config);
 
-  DJI_motor_instance[idx++]=instance;
+  //DJI_motor_instance[idx++]=instance;
   
   return instance;
 }
@@ -80,6 +82,8 @@ void CAN_cmd_chassis(DJIMotorInstance *motor_instance,int16_t motor1, int16_t mo
   {
     case M3508:
     case M2006:
+      motor_instance->motor_can_instance->tx_id=CAN_CHASSIS_ALL_ID;
+
       motor_instance->motor_can_instance->tx_buff[0] = motor1 >> 8;
       motor_instance->motor_can_instance->tx_buff[1] = motor1;
       motor_instance->motor_can_instance->tx_buff[2] = motor2 >> 8;

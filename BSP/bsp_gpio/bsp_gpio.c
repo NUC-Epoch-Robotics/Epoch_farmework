@@ -16,6 +16,7 @@
 /* Includes -------------------------------------------------------------------*/
 #include "bsp_gpio.h"
 #include "stdlib.h"
+#include "string.h"
 /* Private  typedef -----------------------------------------------------------*/
 static uint8_t idx;
 static GPIOInstance *gpio_instance[GPIO_MX_DEVICE_NUM] = {NULL};

@@ -47,6 +47,16 @@ typedef struct tmpgpio
     void *id;                                      // 区分不同的GPIO实例
 
 } GPIOInstance;
+
+typedef struct 
+{
+    GPIO_TypeDef *GPIOx;        // GPIOA,GPIOB,GPIOC...
+    GPIO_PinState pin_state;    // 引脚状态,Set,Reset;not frequently used
+    GPIO_EXTI_MODE_e exti_mode; // 外部中断模式 not frequently used
+    uint16_t GPIO_Pin;          // 引脚号,
+    void (*gpio_model_callback)(struct tmpgpio *);
+    void *id; 
+}GPIO_Init_Config_s;
 /* Exported constants --------------------------------------------------------*/
 #define GPIO_MX_DEVICE_NUM 10
 /* Exported macro ------------------------------------------------------------*/
