@@ -8,6 +8,8 @@
         "main.h": "c",
         "bsp_can.h": "c",
         "dji_motor.h": "c",
-        "stdint.h": "c"
+        "stdint.h": "c",
+        "can.h": "c",
+        "pid.h": "c"
     }
 }

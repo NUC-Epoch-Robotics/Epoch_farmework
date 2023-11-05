@@ -31,6 +31,7 @@
 "epoch_framework\bsp_gpio.o"
 "epoch_framework\bsp_usart.o"
 "epoch_framework\dji_motor.o"
+"epoch_framework\pid.o"
 --strict --scatter "Epoch_framework\Epoch_framework.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

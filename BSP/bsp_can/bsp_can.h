@@ -77,7 +77,7 @@ typedef struct
 /* Exported constants --------------------------------------------------------*/
 /* Exported macro ------------------------------------------------------------*/
 
-#define DEVICE_CAN_CNT 2 //A板最多有两个can通道
+#define DEVICE_CAN_CNT 16
 /* Exported functions ------------------------------------------------------- */
 
 CANInstance *CANRegister(CAN_Init_Config_s *init_config);

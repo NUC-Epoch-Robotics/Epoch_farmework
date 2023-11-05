@@ -39,7 +39,7 @@ typedef struct
   CANInstance *motor_can_instance;
   Motor_Measure_s motor_measure;
   Motor_Type_e motor_type;
-}DJIMotorInstance;
+}DJI_Motor_Instance;
 
 typedef struct
 {
@@ -67,11 +67,11 @@ typedef enum
 #define DJI_MOTOR_CNT 12
 /* Exported functions ------------------------------------------------------- */
 
-extern DJIMotorInstance *DJI_Motor_init(Motor_Init_Config_s *DJI_motor_config);
+extern DJI_Motor_Instance *DJI_Motor_init(Motor_Init_Config_s *DJI_motor_config);
 
 extern void Decode_Motor_Data(CANInstance *instance);
 
-extern void CAN_cmd_chassis(DJIMotorInstance *motor_instance,int16_t motor1, int16_t motor2, int16_t motor3, int16_t motor4);
+extern void CAN_cmd_chassis(CAN_HandleTypeDef *hcan,Motor_Type_e motor_type,int16_t motor1, int16_t motor2, int16_t motor3, int16_t motor4);
 #endif
 
 /****************** (C) COPYRIGHT 2023 EPOCH *****END OF FILE*************/

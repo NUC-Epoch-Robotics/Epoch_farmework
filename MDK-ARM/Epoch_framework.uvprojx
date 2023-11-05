@@ -926,6 +926,11 @@
               <FileType>1</FileType>
               <FilePath>..\Moudels\DJI_motor\DJI_motor.c</FilePath>
             </File>
+            <File>
+              <FileName>pid.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Moudels\algorithm\pid.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

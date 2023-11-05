@@ -33,7 +33,7 @@
 void Decode_Motor_Data(CANInstance *can_instance)
 {
     uint8_t *rx_buff=can_instance->rx_buff;
-    DJIMotorInstance *motor = (DJIMotorInstance *)can_instance->id;
+    DJI_Motor_Instance *motor = (DJI_Motor_Instance *)can_instance->id;
     Motor_Measure_s *measure = &motor->motor_measure;
 
     measure->last_ecd = measure->ecd;                                   
@@ -51,10 +51,10 @@ void Decode_Motor_Data(CANInstance *can_instance)
   * @retval 电机实例
   * @note 使用该函数应该提前给DJI_motor_config中motor_type以及can_handle、tx_id赋值
   */
-DJIMotorInstance *DJI_Motor_init(Motor_Init_Config_s *DJI_motor_config)
+DJI_Motor_Instance *DJI_Motor_init(Motor_Init_Config_s *DJI_motor_config)
 {
-  DJIMotorInstance *instance = (DJIMotorInstance *)malloc(sizeof(DJIMotorInstance));
-  memset(instance, 0, sizeof(DJIMotorInstance));
+  DJI_Motor_Instance *instance = (DJI_Motor_Instance *)malloc(sizeof(DJI_Motor_Instance));
+  memset(instance, 0, sizeof(DJI_Motor_Instance));
 
   instance->motor_type = DJI_motor_config->motor_type; 
 
@@ -69,32 +69,38 @@ DJIMotorInstance *DJI_Motor_init(Motor_Init_Config_s *DJI_motor_config)
 
 /**
   * @brief          发送电机控制电流(0x201,0x202,0x203,0x204)
-  * @param[in]      motor_instance: 电机实例 
+  * @param[in]      hcan: 电机实例 
+  * @param[in]      motor_type 电机类型
   * @param[in]      motor1: (0x201) 3508电机控制电流, 范围 [-16384,16384]
   * @param[in]      motor2: (0x202) 3508电机控制电流, 范围 [-16384,16384]
   * @param[in]      motor3: (0x203) 3508电机控制电流, 范围 [-16384,16384]
   * @param[in]      motor4: (0x204) 3508电机控制电流, 范围 [-16384,16384]
   * @retval         none
   */
-void CAN_cmd_chassis(DJIMotorInstance *motor_instance,int16_t motor1, int16_t motor2, int16_t motor3, int16_t motor4)
+void CAN_cmd_chassis(CAN_HandleTypeDef *hcan,Motor_Type_e motor_type,int16_t motor1, int16_t motor2, int16_t motor3, int16_t motor4)
 {
-  switch(motor_instance->motor_type)
-  {
-    case M3508:
-    case M2006:
-      motor_instance->motor_can_instance->tx_id=CAN_CHASSIS_ALL_ID;
-
-      motor_instance->motor_can_instance->tx_buff[0] = motor1 >> 8;
-      motor_instance->motor_can_instance->tx_buff[1] = motor1;
-      motor_instance->motor_can_instance->tx_buff[2] = motor2 >> 8;
-      motor_instance->motor_can_instance->tx_buff[3] = motor2;
-      motor_instance->motor_can_instance->tx_buff[4] = motor3 >> 8;
-      motor_instance->motor_can_instance->tx_buff[5] = motor3;
-      motor_instance->motor_can_instance->tx_buff[6] = motor4 >> 8;
-      motor_instance->motor_can_instance->tx_buff[7] = motor4;
-
-      CAN_Send_Packet(motor_instance->motor_can_instance);
-      
+    while ( !(HAL_CAN_GetTxMailboxesFreeLevel(hcan)) ){} //等待空邮箱
+    
+    uint32_t send_mail_box;
+    uint8_t  chassis_can_send_data[8];
+    CAN_TxHeaderTypeDef  chassis_tx_message;
+    switch(motor_type)
+    { 
+      case M3508:
+      case M2006:
+        chassis_tx_message.StdId = CAN_CHASSIS_ALL_ID;
+        chassis_tx_message.IDE = CAN_ID_STD;
+        chassis_tx_message.RTR = CAN_RTR_DATA;
+        chassis_tx_message.DLC = 0x08;
+        chassis_can_send_data[0] = motor1 >> 8;
+        chassis_can_send_data[1] = motor1;
+        chassis_can_send_data[2] = motor2 >> 8;
+        chassis_can_send_data[3] = motor2;
+        chassis_can_send_data[4] = motor3 >> 8;
+        chassis_can_send_data[5] = motor3;
+        chassis_can_send_data[6] = motor4 >> 8;
+        chassis_can_send_data[7] = motor4;
+        HAL_CAN_AddTxMessage(hcan, &chassis_tx_message, chassis_can_send_data, &send_mail_box);
       break;
 
     default:

@@ -14,7 +14,8 @@
                 "d:\\gyn\\stm32\\Epoch_framework\\MDK-ARM",
                 "d:\\gyn\\stm32\\Epoch_framework\\Core\\Src",
                 "d:\\gyn\\stm32\\Epoch_framework\\Drivers\\STM32F4xx_HAL_Driver\\Src",
-                "d:\\gyn\\stm32\\Epoch_framework\\BSP\\bsp_usart"
+                "d:\\gyn\\stm32\\Epoch_framework\\BSP\\bsp_usart",
+                "d:\\gyn\\stm32\\Epoch_framework\\Moudels\\algorithm"
             ],
             "defines": [
                 "USE_HAL_DRIVER",
