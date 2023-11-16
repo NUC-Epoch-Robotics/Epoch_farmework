@@ -1,7 +1,7 @@
 Dependencies for Project 'Epoch_framework', Target 'Epoch_framework': (DO NOT MODIFY !)
 CompilerVersion: 5060960::V5.06 update 7 (build 960)::.\ARMCC
 F (startup_stm32f427xx.s)(0x654647D6)(--cpu Cortex-M4.fp.sp -g --apcs=interwork -I.\RTE\_Epoch_framework-ID:\MDK5.36\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\MDK5.36\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include--pd "__UVISION_VERSION SETA 538" --pd "_RTE_ SETA 1" --pd "STM32F427xx SETA 1" --pd "_RTE_ SETA 1"--list startup_stm32f427xx.lst --xref -o epoch_framework\startup_stm32f427xx.o --depend epoch_framework\startup_stm32f427xx.d)
-F (../Core/Src/main.c)(0x65464A99)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/bsp_can -I ../BSP/bsp_gpio -I ../Moudels/DJI_motor-I.\RTE\_Epoch_framework-ID:\MDK5.36\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\MDK5.36\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o epoch_framework\main.o --omf_browse epoch_framework\main.crf --depend epoch_framework\main.d)
+F (../Core/Src/main.c)(0x6555F967)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/bsp_can -I ../BSP/bsp_gpio -I ../Moudels/DJI_motor -I ..\Moudels\pid -I ..\Moudels\Servo-I.\RTE\_Epoch_framework-ID:\MDK5.36\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\MDK5.36\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o epoch_framework\main.o --omf_browse epoch_framework\main.crf --depend epoch_framework\main.d)
 I (../Core/Inc/main.h)(0x654647D5)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6443AB6B)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x654647D5)
@@ -38,9 +38,9 @@ I (../Core/Inc/can.h)(0x653DACC0)
 I (../Core/Inc/i2c.h)(0x653DACC0)
 I (../Core/Inc/usart.h)(0x6546261A)
 I (../Core/Inc/gpio.h)(0x653DACC0)
-I (../Moudels/DJI_motor/DJI_motor.h)(0x654772EB)
+I (../Moudels/DJI_motor/DJI_motor.h)(0x6548CFA6)
 I (../BSP/bsp_can/bsp_can.h)(0x654748EA)
-F (../Core/Src/gpio.c)(0x654647D4)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/bsp_can -I ../BSP/bsp_gpio -I ../Moudels/DJI_motor-I.\RTE\_Epoch_framework-ID:\MDK5.36\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\MDK5.36\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o epoch_framework\gpio.o --omf_browse epoch_framework\gpio.crf --depend epoch_framework\gpio.d)
+F (../Core/Src/gpio.c)(0x654647D4)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/bsp_can -I ../BSP/bsp_gpio -I ../Moudels/DJI_motor -I ..\Moudels\pid -I ..\Moudels\Servo-I.\RTE\_Epoch_framework-ID:\MDK5.36\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\MDK5.36\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o epoch_framework\gpio.o --omf_browse epoch_framework\gpio.crf --depend epoch_framework\gpio.d)
 I (../Core/Inc/gpio.h)(0x653DACC0)
 I (../Core/Inc/main.h)(0x654647D5)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6443AB6B)
@@ -74,7 +74,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6443AB6B)
-F (../Core/Src/can.c)(0x6546261A)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/bsp_can -I ../BSP/bsp_gpio -I ../Moudels/DJI_motor-I.\RTE\_Epoch_framework-ID:\MDK5.36\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\MDK5.36\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o epoch_framework\can.o --omf_browse epoch_framework\can.crf --depend epoch_framework\can.d)
+F (../Core/Src/can.c)(0x6546261A)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/bsp_can -I ../BSP/bsp_gpio -I ../Moudels/DJI_motor -I ..\Moudels\pid -I ..\Moudels\Servo-I.\RTE\_Epoch_framework-ID:\MDK5.36\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\MDK5.36\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o epoch_framework\can.o --omf_browse epoch_framework\can.crf --depend epoch_framework\can.d)
 I (../Core/Inc/can.h)(0x653DACC0)
 I (../Core/Inc/main.h)(0x654647D5)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6443AB6B)
@@ -108,7 +108,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6443AB6B)
-F (../Core/Src/i2c.c)(0x6546261A)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/bsp_can -I ../BSP/bsp_gpio -I ../Moudels/DJI_motor-I.\RTE\_Epoch_framework-ID:\MDK5.36\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\MDK5.36\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o epoch_framework\i2c.o --omf_browse epoch_framework\i2c.crf --depend epoch_framework\i2c.d)
+F (../Core/Src/i2c.c)(0x6546261A)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/bsp_can -I ../BSP/bsp_gpio -I ../Moudels/DJI_motor -I ..\Moudels\pid -I ..\Moudels\Servo-I.\RTE\_Epoch_framework-ID:\MDK5.36\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\MDK5.36\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o epoch_framework\i2c.o --omf_browse epoch_framework\i2c.crf --depend epoch_framework\i2c.d)
 I (../Core/Inc/i2c.h)(0x653DACC0)
 I (../Core/Inc/main.h)(0x654647D5)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6443AB6B)
@@ -142,7 +142,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6443AB6B)
-F (../Core/Src/usart.c)(0x6546261A)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/bsp_can -I ../BSP/bsp_gpio -I ../Moudels/DJI_motor-I.\RTE\_Epoch_framework-ID:\MDK5.36\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\MDK5.36\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o epoch_framework\usart.o --omf_browse epoch_framework\usart.crf --depend epoch_framework\usart.d)
+F (../Core/Src/usart.c)(0x6546261A)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/bsp_can -I ../BSP/bsp_gpio -I ../Moudels/DJI_motor -I ..\Moudels\pid -I ..\Moudels\Servo-I.\RTE\_Epoch_framework-ID:\MDK5.36\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\MDK5.36\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o epoch_framework\usart.o --omf_browse epoch_framework\usart.crf --depend epoch_framework\usart.d)
 I (../Core/Inc/usart.h)(0x6546261A)
 I (../Core/Inc/main.h)(0x654647D5)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6443AB6B)
@@ -176,7 +176,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6443AB6B)
-F (../Core/Src/stm32f4xx_it.c)(0x6546261A)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/bsp_can -I ../BSP/bsp_gpio -I ../Moudels/DJI_motor-I.\RTE\_Epoch_framework-ID:\MDK5.36\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\MDK5.36\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o epoch_framework\stm32f4xx_it.o --omf_browse epoch_framework\stm32f4xx_it.crf --depend epoch_framework\stm32f4xx_it.d)
+F (../Core/Src/stm32f4xx_it.c)(0x6546261A)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/bsp_can -I ../BSP/bsp_gpio -I ../Moudels/DJI_motor -I ..\Moudels\pid -I ..\Moudels\Servo-I.\RTE\_Epoch_framework-ID:\MDK5.36\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\MDK5.36\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o epoch_framework\stm32f4xx_it.o --omf_browse epoch_framework\stm32f4xx_it.crf --depend epoch_framework\stm32f4xx_it.d)
 I (../Core/Inc/main.h)(0x654647D5)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6443AB6B)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x654647D5)
@@ -210,7 +210,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6443AB6B)
 I (../Core/Inc/stm32f4xx_it.h)(0x6546261A)
-F (../Core/Src/stm32f4xx_hal_msp.c)(0x654647D4)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/bsp_can -I ../BSP/bsp_gpio -I ../Moudels/DJI_motor-I.\RTE\_Epoch_framework-ID:\MDK5.36\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\MDK5.36\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o epoch_framework\stm32f4xx_hal_msp.o --omf_browse epoch_framework\stm32f4xx_hal_msp.crf --depend epoch_framework\stm32f4xx_hal_msp.d)
+F (../Core/Src/stm32f4xx_hal_msp.c)(0x654647D4)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/bsp_can -I ../BSP/bsp_gpio -I ../Moudels/DJI_motor -I ..\Moudels\pid -I ..\Moudels\Servo-I.\RTE\_Epoch_framework-ID:\MDK5.36\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\MDK5.36\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o epoch_framework\stm32f4xx_hal_msp.o --omf_browse epoch_framework\stm32f4xx_hal_msp.crf --depend epoch_framework\stm32f4xx_hal_msp.d)
 I (../Core/Inc/main.h)(0x654647D5)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6443AB6B)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x654647D5)
@@ -243,7 +243,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6443AB6B)
-F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c)(0x6443AB6B)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/bsp_can -I ../BSP/bsp_gpio -I ../Moudels/DJI_motor-I.\RTE\_Epoch_framework-ID:\MDK5.36\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\MDK5.36\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o epoch_framework\stm32f4xx_hal_can.o --omf_browse epoch_framework\stm32f4xx_hal_can.crf --depend epoch_framework\stm32f4xx_hal_can.d)
+F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c)(0x6443AB6B)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/bsp_can -I ../BSP/bsp_gpio -I ../Moudels/DJI_motor -I ..\Moudels\pid -I ..\Moudels\Servo-I.\RTE\_Epoch_framework-ID:\MDK5.36\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\MDK5.36\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o epoch_framework\stm32f4xx_hal_can.o --omf_browse epoch_framework\stm32f4xx_hal_can.crf --depend epoch_framework\stm32f4xx_hal_can.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6443AB6B)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x654647D5)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6443AB6B)
@@ -275,7 +275,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6443AB6B)
-F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c)(0x6443AB6B)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/bsp_can -I ../BSP/bsp_gpio -I ../Moudels/DJI_motor-I.\RTE\_Epoch_framework-ID:\MDK5.36\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\MDK5.36\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o epoch_framework\stm32f4xx_hal_rcc.o --omf_browse epoch_framework\stm32f4xx_hal_rcc.crf --depend epoch_framework\stm32f4xx_hal_rcc.d)
+F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c)(0x6443AB6B)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/bsp_can -I ../BSP/bsp_gpio -I ../Moudels/DJI_motor -I ..\Moudels\pid -I ..\Moudels\Servo-I.\RTE\_Epoch_framework-ID:\MDK5.36\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\MDK5.36\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o epoch_framework\stm32f4xx_hal_rcc.o --omf_browse epoch_framework\stm32f4xx_hal_rcc.crf --depend epoch_framework\stm32f4xx_hal_rcc.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6443AB6B)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x654647D5)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6443AB6B)
@@ -307,7 +307,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6443AB6B)
-F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c)(0x6443AB6B)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/bsp_can -I ../BSP/bsp_gpio -I ../Moudels/DJI_motor-I.\RTE\_Epoch_framework-ID:\MDK5.36\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\MDK5.36\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o epoch_framework\stm32f4xx_hal_rcc_ex.o --omf_browse epoch_framework\stm32f4xx_hal_rcc_ex.crf --depend epoch_framework\stm32f4xx_hal_rcc_ex.d)
+F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c)(0x6443AB6B)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/bsp_can -I ../BSP/bsp_gpio -I ../Moudels/DJI_motor -I ..\Moudels\pid -I ..\Moudels\Servo-I.\RTE\_Epoch_framework-ID:\MDK5.36\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\MDK5.36\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o epoch_framework\stm32f4xx_hal_rcc_ex.o --omf_browse epoch_framework\stm32f4xx_hal_rcc_ex.crf --depend epoch_framework\stm32f4xx_hal_rcc_ex.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6443AB6B)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x654647D5)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6443AB6B)
@@ -339,7 +339,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6443AB6B)
-F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c)(0x6443AB6B)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/bsp_can -I ../BSP/bsp_gpio -I ../Moudels/DJI_motor-I.\RTE\_Epoch_framework-ID:\MDK5.36\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\MDK5.36\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o epoch_framework\stm32f4xx_hal_flash.o --omf_browse epoch_framework\stm32f4xx_hal_flash.crf --depend epoch_framework\stm32f4xx_hal_flash.d)
+F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c)(0x6443AB6B)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/bsp_can -I ../BSP/bsp_gpio -I ../Moudels/DJI_motor -I ..\Moudels\pid -I ..\Moudels\Servo-I.\RTE\_Epoch_framework-ID:\MDK5.36\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\MDK5.36\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o epoch_framework\stm32f4xx_hal_flash.o --omf_browse epoch_framework\stm32f4xx_hal_flash.crf --depend epoch_framework\stm32f4xx_hal_flash.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6443AB6B)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x654647D5)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6443AB6B)
@@ -371,7 +371,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6443AB6B)
-F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c)(0x6443AB6B)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/bsp_can -I ../BSP/bsp_gpio -I ../Moudels/DJI_motor-I.\RTE\_Epoch_framework-ID:\MDK5.36\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\MDK5.36\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o epoch_framework\stm32f4xx_hal_flash_ex.o --omf_browse epoch_framework\stm32f4xx_hal_flash_ex.crf --depend epoch_framework\stm32f4xx_hal_flash_ex.d)
+F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c)(0x6443AB6B)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/bsp_can -I ../BSP/bsp_gpio -I ../Moudels/DJI_motor -I ..\Moudels\pid -I ..\Moudels\Servo-I.\RTE\_Epoch_framework-ID:\MDK5.36\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\MDK5.36\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o epoch_framework\stm32f4xx_hal_flash_ex.o --omf_browse epoch_framework\stm32f4xx_hal_flash_ex.crf --depend epoch_framework\stm32f4xx_hal_flash_ex.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6443AB6B)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x654647D5)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6443AB6B)
@@ -403,7 +403,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6443AB6B)
-F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c)(0x6443AB6B)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/bsp_can -I ../BSP/bsp_gpio -I ../Moudels/DJI_motor-I.\RTE\_Epoch_framework-ID:\MDK5.36\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\MDK5.36\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o epoch_framework\stm32f4xx_hal_flash_ramfunc.o --omf_browse epoch_framework\stm32f4xx_hal_flash_ramfunc.crf --depend epoch_framework\stm32f4xx_hal_flash_ramfunc.d)
+F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c)(0x6443AB6B)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/bsp_can -I ../BSP/bsp_gpio -I ../Moudels/DJI_motor -I ..\Moudels\pid -I ..\Moudels\Servo-I.\RTE\_Epoch_framework-ID:\MDK5.36\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\MDK5.36\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o epoch_framework\stm32f4xx_hal_flash_ramfunc.o --omf_browse epoch_framework\stm32f4xx_hal_flash_ramfunc.crf --depend epoch_framework\stm32f4xx_hal_flash_ramfunc.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6443AB6B)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x654647D5)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6443AB6B)
@@ -435,7 +435,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6443AB6B)
-F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c)(0x6443AB6B)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/bsp_can -I ../BSP/bsp_gpio -I ../Moudels/DJI_motor-I.\RTE\_Epoch_framework-ID:\MDK5.36\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\MDK5.36\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o epoch_framework\stm32f4xx_hal_gpio.o --omf_browse epoch_framework\stm32f4xx_hal_gpio.crf --depend epoch_framework\stm32f4xx_hal_gpio.d)
+F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c)(0x6443AB6B)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/bsp_can -I ../BSP/bsp_gpio -I ../Moudels/DJI_motor -I ..\Moudels\pid -I ..\Moudels\Servo-I.\RTE\_Epoch_framework-ID:\MDK5.36\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\MDK5.36\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o epoch_framework\stm32f4xx_hal_gpio.o --omf_browse epoch_framework\stm32f4xx_hal_gpio.crf --depend epoch_framework\stm32f4xx_hal_gpio.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6443AB6B)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x654647D5)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6443AB6B)
@@ -467,7 +467,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6443AB6B)
-F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c)(0x6443AB6B)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/bsp_can -I ../BSP/bsp_gpio -I ../Moudels/DJI_motor-I.\RTE\_Epoch_framework-ID:\MDK5.36\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\MDK5.36\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o epoch_framework\stm32f4xx_hal_dma_ex.o --omf_browse epoch_framework\stm32f4xx_hal_dma_ex.crf --depend epoch_framework\stm32f4xx_hal_dma_ex.d)
+F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c)(0x6443AB6B)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/bsp_can -I ../BSP/bsp_gpio -I ../Moudels/DJI_motor -I ..\Moudels\pid -I ..\Moudels\Servo-I.\RTE\_Epoch_framework-ID:\MDK5.36\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\MDK5.36\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o epoch_framework\stm32f4xx_hal_dma_ex.o --omf_browse epoch_framework\stm32f4xx_hal_dma_ex.crf --depend epoch_framework\stm32f4xx_hal_dma_ex.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6443AB6B)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x654647D5)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6443AB6B)
@@ -499,7 +499,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6443AB6B)
-F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c)(0x6443AB6B)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/bsp_can -I ../BSP/bsp_gpio -I ../Moudels/DJI_motor-I.\RTE\_Epoch_framework-ID:\MDK5.36\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\MDK5.36\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o epoch_framework\stm32f4xx_hal_dma.o --omf_browse epoch_framework\stm32f4xx_hal_dma.crf --depend epoch_framework\stm32f4xx_hal_dma.d)
+F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c)(0x6443AB6B)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/bsp_can -I ../BSP/bsp_gpio -I ../Moudels/DJI_motor -I ..\Moudels\pid -I ..\Moudels\Servo-I.\RTE\_Epoch_framework-ID:\MDK5.36\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\MDK5.36\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o epoch_framework\stm32f4xx_hal_dma.o --omf_browse epoch_framework\stm32f4xx_hal_dma.crf --depend epoch_framework\stm32f4xx_hal_dma.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6443AB6B)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x654647D5)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6443AB6B)
@@ -531,7 +531,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6443AB6B)
-F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c)(0x6443AB6B)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/bsp_can -I ../BSP/bsp_gpio -I ../Moudels/DJI_motor-I.\RTE\_Epoch_framework-ID:\MDK5.36\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\MDK5.36\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o epoch_framework\stm32f4xx_hal_pwr.o --omf_browse epoch_framework\stm32f4xx_hal_pwr.crf --depend epoch_framework\stm32f4xx_hal_pwr.d)
+F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c)(0x6443AB6B)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/bsp_can -I ../BSP/bsp_gpio -I ../Moudels/DJI_motor -I ..\Moudels\pid -I ..\Moudels\Servo-I.\RTE\_Epoch_framework-ID:\MDK5.36\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\MDK5.36\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o epoch_framework\stm32f4xx_hal_pwr.o --omf_browse epoch_framework\stm32f4xx_hal_pwr.crf --depend epoch_framework\stm32f4xx_hal_pwr.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6443AB6B)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x654647D5)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6443AB6B)
@@ -563,7 +563,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6443AB6B)
-F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c)(0x6443AB6B)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/bsp_can -I ../BSP/bsp_gpio -I ../Moudels/DJI_motor-I.\RTE\_Epoch_framework-ID:\MDK5.36\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\MDK5.36\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o epoch_framework\stm32f4xx_hal_pwr_ex.o --omf_browse epoch_framework\stm32f4xx_hal_pwr_ex.crf --depend epoch_framework\stm32f4xx_hal_pwr_ex.d)
+F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c)(0x6443AB6B)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/bsp_can -I ../BSP/bsp_gpio -I ../Moudels/DJI_motor -I ..\Moudels\pid -I ..\Moudels\Servo-I.\RTE\_Epoch_framework-ID:\MDK5.36\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\MDK5.36\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o epoch_framework\stm32f4xx_hal_pwr_ex.o --omf_browse epoch_framework\stm32f4xx_hal_pwr_ex.crf --depend epoch_framework\stm32f4xx_hal_pwr_ex.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6443AB6B)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x654647D5)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6443AB6B)
@@ -595,7 +595,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6443AB6B)
-F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c)(0x6443AB6B)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/bsp_can -I ../BSP/bsp_gpio -I ../Moudels/DJI_motor-I.\RTE\_Epoch_framework-ID:\MDK5.36\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\MDK5.36\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o epoch_framework\stm32f4xx_hal_cortex.o --omf_browse epoch_framework\stm32f4xx_hal_cortex.crf --depend epoch_framework\stm32f4xx_hal_cortex.d)
+F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c)(0x6443AB6B)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/bsp_can -I ../BSP/bsp_gpio -I ../Moudels/DJI_motor -I ..\Moudels\pid -I ..\Moudels\Servo-I.\RTE\_Epoch_framework-ID:\MDK5.36\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\MDK5.36\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o epoch_framework\stm32f4xx_hal_cortex.o --omf_browse epoch_framework\stm32f4xx_hal_cortex.crf --depend epoch_framework\stm32f4xx_hal_cortex.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6443AB6B)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x654647D5)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6443AB6B)
@@ -627,7 +627,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6443AB6B)
-F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c)(0x6443AB6B)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/bsp_can -I ../BSP/bsp_gpio -I ../Moudels/DJI_motor-I.\RTE\_Epoch_framework-ID:\MDK5.36\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\MDK5.36\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o epoch_framework\stm32f4xx_hal.o --omf_browse epoch_framework\stm32f4xx_hal.crf --depend epoch_framework\stm32f4xx_hal.d)
+F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c)(0x6443AB6B)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/bsp_can -I ../BSP/bsp_gpio -I ../Moudels/DJI_motor -I ..\Moudels\pid -I ..\Moudels\Servo-I.\RTE\_Epoch_framework-ID:\MDK5.36\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\MDK5.36\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o epoch_framework\stm32f4xx_hal.o --omf_browse epoch_framework\stm32f4xx_hal.crf --depend epoch_framework\stm32f4xx_hal.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6443AB6B)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x654647D5)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6443AB6B)
@@ -659,7 +659,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6443AB6B)
-F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c)(0x6443AB6B)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/bsp_can -I ../BSP/bsp_gpio -I ../Moudels/DJI_motor-I.\RTE\_Epoch_framework-ID:\MDK5.36\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\MDK5.36\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o epoch_framework\stm32f4xx_hal_exti.o --omf_browse epoch_framework\stm32f4xx_hal_exti.crf --depend epoch_framework\stm32f4xx_hal_exti.d)
+F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c)(0x6443AB6B)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/bsp_can -I ../BSP/bsp_gpio -I ../Moudels/DJI_motor -I ..\Moudels\pid -I ..\Moudels\Servo-I.\RTE\_Epoch_framework-ID:\MDK5.36\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\MDK5.36\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o epoch_framework\stm32f4xx_hal_exti.o --omf_browse epoch_framework\stm32f4xx_hal_exti.crf --depend epoch_framework\stm32f4xx_hal_exti.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6443AB6B)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x654647D5)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6443AB6B)
@@ -691,7 +691,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6443AB6B)
-F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c)(0x6443AB6B)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/bsp_can -I ../BSP/bsp_gpio -I ../Moudels/DJI_motor-I.\RTE\_Epoch_framework-ID:\MDK5.36\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\MDK5.36\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o epoch_framework\stm32f4xx_hal_i2c.o --omf_browse epoch_framework\stm32f4xx_hal_i2c.crf --depend epoch_framework\stm32f4xx_hal_i2c.d)
+F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c)(0x6443AB6B)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/bsp_can -I ../BSP/bsp_gpio -I ../Moudels/DJI_motor -I ..\Moudels\pid -I ..\Moudels\Servo-I.\RTE\_Epoch_framework-ID:\MDK5.36\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\MDK5.36\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o epoch_framework\stm32f4xx_hal_i2c.o --omf_browse epoch_framework\stm32f4xx_hal_i2c.crf --depend epoch_framework\stm32f4xx_hal_i2c.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6443AB6B)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x654647D5)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6443AB6B)
@@ -723,7 +723,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6443AB6B)
-F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.c)(0x6443AB6B)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/bsp_can -I ../BSP/bsp_gpio -I ../Moudels/DJI_motor-I.\RTE\_Epoch_framework-ID:\MDK5.36\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\MDK5.36\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o epoch_framework\stm32f4xx_hal_i2c_ex.o --omf_browse epoch_framework\stm32f4xx_hal_i2c_ex.crf --depend epoch_framework\stm32f4xx_hal_i2c_ex.d)
+F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.c)(0x6443AB6B)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/bsp_can -I ../BSP/bsp_gpio -I ../Moudels/DJI_motor -I ..\Moudels\pid -I ..\Moudels\Servo-I.\RTE\_Epoch_framework-ID:\MDK5.36\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\MDK5.36\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o epoch_framework\stm32f4xx_hal_i2c_ex.o --omf_browse epoch_framework\stm32f4xx_hal_i2c_ex.crf --depend epoch_framework\stm32f4xx_hal_i2c_ex.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6443AB6B)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x654647D5)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6443AB6B)
@@ -755,7 +755,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6443AB6B)
-F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c)(0x6443AB6B)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/bsp_can -I ../BSP/bsp_gpio -I ../Moudels/DJI_motor-I.\RTE\_Epoch_framework-ID:\MDK5.36\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\MDK5.36\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o epoch_framework\stm32f4xx_hal_tim.o --omf_browse epoch_framework\stm32f4xx_hal_tim.crf --depend epoch_framework\stm32f4xx_hal_tim.d)
+F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c)(0x6443AB6B)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/bsp_can -I ../BSP/bsp_gpio -I ../Moudels/DJI_motor -I ..\Moudels\pid -I ..\Moudels\Servo-I.\RTE\_Epoch_framework-ID:\MDK5.36\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\MDK5.36\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o epoch_framework\stm32f4xx_hal_tim.o --omf_browse epoch_framework\stm32f4xx_hal_tim.crf --depend epoch_framework\stm32f4xx_hal_tim.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6443AB6B)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x654647D5)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6443AB6B)
@@ -787,7 +787,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6443AB6B)
-F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c)(0x6443AB6B)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/bsp_can -I ../BSP/bsp_gpio -I ../Moudels/DJI_motor-I.\RTE\_Epoch_framework-ID:\MDK5.36\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\MDK5.36\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o epoch_framework\stm32f4xx_hal_tim_ex.o --omf_browse epoch_framework\stm32f4xx_hal_tim_ex.crf --depend epoch_framework\stm32f4xx_hal_tim_ex.d)
+F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c)(0x6443AB6B)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/bsp_can -I ../BSP/bsp_gpio -I ../Moudels/DJI_motor -I ..\Moudels\pid -I ..\Moudels\Servo-I.\RTE\_Epoch_framework-ID:\MDK5.36\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\MDK5.36\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o epoch_framework\stm32f4xx_hal_tim_ex.o --omf_browse epoch_framework\stm32f4xx_hal_tim_ex.crf --depend epoch_framework\stm32f4xx_hal_tim_ex.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6443AB6B)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x654647D5)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6443AB6B)
@@ -819,7 +819,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6443AB6B)
-F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c)(0x6443AB6B)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/bsp_can -I ../BSP/bsp_gpio -I ../Moudels/DJI_motor-I.\RTE\_Epoch_framework-ID:\MDK5.36\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\MDK5.36\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o epoch_framework\stm32f4xx_hal_uart.o --omf_browse epoch_framework\stm32f4xx_hal_uart.crf --depend epoch_framework\stm32f4xx_hal_uart.d)
+F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c)(0x6443AB6B)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/bsp_can -I ../BSP/bsp_gpio -I ../Moudels/DJI_motor -I ..\Moudels\pid -I ..\Moudels\Servo-I.\RTE\_Epoch_framework-ID:\MDK5.36\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\MDK5.36\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o epoch_framework\stm32f4xx_hal_uart.o --omf_browse epoch_framework\stm32f4xx_hal_uart.crf --depend epoch_framework\stm32f4xx_hal_uart.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6443AB6B)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x654647D5)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6443AB6B)
@@ -851,7 +851,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6443AB6B)
-F (../Core/Src/system_stm32f4xx.c)(0x653DACC0)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/bsp_can -I ../BSP/bsp_gpio -I ../Moudels/DJI_motor-I.\RTE\_Epoch_framework-ID:\MDK5.36\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\MDK5.36\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o epoch_framework\system_stm32f4xx.o --omf_browse epoch_framework\system_stm32f4xx.crf --depend epoch_framework\system_stm32f4xx.d)
+F (../Core/Src/system_stm32f4xx.c)(0x653DACC0)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/bsp_can -I ../BSP/bsp_gpio -I ../Moudels/DJI_motor -I ..\Moudels\pid -I ..\Moudels\Servo-I.\RTE\_Epoch_framework-ID:\MDK5.36\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\MDK5.36\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o epoch_framework\system_stm32f4xx.o --omf_browse epoch_framework\system_stm32f4xx.crf --depend epoch_framework\system_stm32f4xx.d)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6443AAEF)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f427xx.h)(0x6443AAEF)
 I (../Drivers/CMSIS/Include/core_cm4.h)(0x6443AAF1)
@@ -883,7 +883,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6443AB6B)
-F (..\BSP\bsp_can\bsp_can.c)(0x65463D38)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/bsp_can -I ../BSP/bsp_gpio -I ../Moudels/DJI_motor-I.\RTE\_Epoch_framework-ID:\MDK5.36\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\MDK5.36\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o epoch_framework\bsp_can.o --omf_browse epoch_framework\bsp_can.crf --depend epoch_framework\bsp_can.d)
+F (..\BSP\bsp_can\bsp_can.c)(0x65463D38)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/bsp_can -I ../BSP/bsp_gpio -I ../Moudels/DJI_motor -I ..\Moudels\pid -I ..\Moudels\Servo-I.\RTE\_Epoch_framework-ID:\MDK5.36\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\MDK5.36\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o epoch_framework\bsp_can.o --omf_browse epoch_framework\bsp_can.crf --depend epoch_framework\bsp_can.d)
 I (..\BSP\bsp_can\bsp_can.h)(0x654748EA)
 I (D:\MDK5.36\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (../Core/Inc/can.h)(0x653DACC0)
@@ -920,7 +920,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6443AB6B)
 I (D:\MDK5.36\ARM\ARMCC\include\string.h)(0x6025237E)
 I (D:\MDK5.36\ARM\ARMCC\include\stdlib.h)(0x60252374)
-F (..\BSP\bsp_gpio\bsp_gpio.c)(0x65463510)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/bsp_can -I ../BSP/bsp_gpio -I ../Moudels/DJI_motor-I.\RTE\_Epoch_framework-ID:\MDK5.36\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\MDK5.36\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o epoch_framework\bsp_gpio.o --omf_browse epoch_framework\bsp_gpio.crf --depend epoch_framework\bsp_gpio.d)
+F (..\BSP\bsp_gpio\bsp_gpio.c)(0x65463510)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/bsp_can -I ../BSP/bsp_gpio -I ../Moudels/DJI_motor -I ..\Moudels\pid -I ..\Moudels\Servo-I.\RTE\_Epoch_framework-ID:\MDK5.36\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\MDK5.36\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o epoch_framework\bsp_gpio.o --omf_browse epoch_framework\bsp_gpio.crf --depend epoch_framework\bsp_gpio.d)
 I (..\BSP\bsp_gpio\bsp_gpio.h)(0x654635C0)
 I (../Core/Inc/gpio.h)(0x653DACC0)
 I (../Core/Inc/main.h)(0x654647D5)
@@ -957,7 +957,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6443AB6B)
 I (D:\MDK5.36\ARM\ARMCC\include\stdlib.h)(0x60252374)
 I (D:\MDK5.36\ARM\ARMCC\include\string.h)(0x6025237E)
-F (..\BSP\bsp_usart\bsp_usart.c)(0x653DCA7F)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/bsp_can -I ../BSP/bsp_gpio -I ../Moudels/DJI_motor-I.\RTE\_Epoch_framework-ID:\MDK5.36\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\MDK5.36\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o epoch_framework\bsp_usart.o --omf_browse epoch_framework\bsp_usart.crf --depend epoch_framework\bsp_usart.d)
+F (..\BSP\bsp_usart\bsp_usart.c)(0x653DCA7F)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/bsp_can -I ../BSP/bsp_gpio -I ../Moudels/DJI_motor -I ..\Moudels\pid -I ..\Moudels\Servo-I.\RTE\_Epoch_framework-ID:\MDK5.36\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\MDK5.36\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o epoch_framework\bsp_usart.o --omf_browse epoch_framework\bsp_usart.crf --depend epoch_framework\bsp_usart.d)
 I (..\BSP\bsp_usart\bsp_usart.h)(0x6540B6F9)
 I (D:\MDK5.36\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (../Core/Inc/usart.h)(0x6546261A)
@@ -994,8 +994,8 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6443AB6B)
 I (D:\MDK5.36\ARM\ARMCC\include\string.h)(0x6025237E)
 I (D:\MDK5.36\ARM\ARMCC\include\stdlib.h)(0x60252374)
-F (..\Moudels\DJI_motor\DJI_motor.c)(0x654772EA)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/bsp_can -I ../BSP/bsp_gpio -I ../Moudels/DJI_motor-I.\RTE\_Epoch_framework-ID:\MDK5.36\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\MDK5.36\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o epoch_framework\dji_motor.o --omf_browse epoch_framework\dji_motor.crf --depend epoch_framework\dji_motor.d)
-I (..\Moudels\DJI_motor\DJI_motor.h)(0x654772EB)
+F (..\Moudels\DJI_motor\DJI_motor.c)(0x6548CFF4)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/bsp_can -I ../BSP/bsp_gpio -I ../Moudels/DJI_motor -I ..\Moudels\pid -I ..\Moudels\Servo-I.\RTE\_Epoch_framework-ID:\MDK5.36\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\MDK5.36\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o epoch_framework\dji_motor.o --omf_browse epoch_framework\dji_motor.crf --depend epoch_framework\dji_motor.d)
+I (..\Moudels\DJI_motor\DJI_motor.h)(0x6548CFA6)
 I (D:\MDK5.36\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (../BSP/bsp_can/bsp_can.h)(0x654748EA)
 I (../Core/Inc/can.h)(0x653DACC0)
@@ -1032,4 +1032,73 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x6443AB6B)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6443AB6B)
 I (D:\MDK5.36\ARM\ARMCC\include\string.h)(0x6025237E)
 I (D:\MDK5.36\ARM\ARMCC\include\stdlib.h)(0x60252374)
-F (..\Moudels\algorithm\pid.c)(0x6547731E)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/bsp_can -I ../BSP/bsp_gpio -I ../Moudels/DJI_motor-I.\RTE\_Epoch_framework-ID:\MDK5.36\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\MDK5.36\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o epoch_framework\pid.o --omf_browse epoch_framework\pid.crf --depend epoch_framework\pid.d)
+F (..\Moudels\pid\pid.c)(0x6555F9CE)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/bsp_can -I ../BSP/bsp_gpio -I ../Moudels/DJI_motor -I ..\Moudels\pid -I ..\Moudels\Servo-I.\RTE\_Epoch_framework-ID:\MDK5.36\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\MDK5.36\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o epoch_framework\pid.o --omf_browse epoch_framework\pid.crf --depend epoch_framework\pid.d)
+I (..\Moudels\pid\pid.h)(0x6547735F)
+I (D:\MDK5.36\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6443AAEF)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f427xx.h)(0x6443AAEF)
+I (../Drivers/CMSIS/Include/core_cm4.h)(0x6443AAF1)
+I (../Drivers/CMSIS/Include/cmsis_version.h)(0x6443AAF1)
+I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x6443AAF1)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x6443AAF1)
+I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x6443AAF1)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h)(0x6443AAEF)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6443AB6B)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x654647D5)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6443AB6B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6443AB6B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x6443AB6B)
+I (D:\MDK5.36\ARM\ARMCC\include\stddef.h)(0x6025237E)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h)(0x6443AB6B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h)(0x6443AB6B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h)(0x6443AB6B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h)(0x6443AB6B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h)(0x6443AB6B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h)(0x6443AB6B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h)(0x6443AB6B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_can.h)(0x6443AB6B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h)(0x6443AB6B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h)(0x6443AB6B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h)(0x6443AB6B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h)(0x6443AB6B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h)(0x6443AB6B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x6443AB6B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x6443AB6B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6443AB6B)
+I (D:\MDK5.36\ARM\ARMCC\include\math.h)(0x60252378)
+F (..\Moudels\Servo\Servo.c)(0x6555FC8A)(--c99 -c --cpu Cortex-M4.fp.sp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../BSP/bsp_can -I ../BSP/bsp_gpio -I ../Moudels/DJI_motor -I ..\Moudels\pid -I ..\Moudels\Servo-I.\RTE\_Epoch_framework-ID:\MDK5.36\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\MDK5.36\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F427xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F427xx-o epoch_framework\servo.o --omf_browse epoch_framework\servo.crf --depend epoch_framework\servo.d)
+I (..\Moudels\Servo\Servo.h)(0x6555FB8C)
+I (D:\MDK5.36\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (../Core/Inc/usart.h)(0x6546261A)
+I (../Core/Inc/main.h)(0x654647D5)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6443AB6B)
+I (../Core/Inc/stm32f4xx_hal_conf.h)(0x654647D5)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6443AB6B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6443AB6B)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6443AAEF)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f427xx.h)(0x6443AAEF)
+I (../Drivers/CMSIS/Include/core_cm4.h)(0x6443AAF1)
+I (../Drivers/CMSIS/Include/cmsis_version.h)(0x6443AAF1)
+I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x6443AAF1)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x6443AAF1)
+I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x6443AAF1)
+I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h)(0x6443AAEF)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x6443AB6B)
+I (D:\MDK5.36\ARM\ARMCC\include\stddef.h)(0x6025237E)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h)(0x6443AB6B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h)(0x6443AB6B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h)(0x6443AB6B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h)(0x6443AB6B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h)(0x6443AB6B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h)(0x6443AB6B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h)(0x6443AB6B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_can.h)(0x6443AB6B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h)(0x6443AB6B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h)(0x6443AB6B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h)(0x6443AB6B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h)(0x6443AB6B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h)(0x6443AB6B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x6443AB6B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x6443AB6B)
+I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6443AB6B)
+I (D:\MDK5.36\ARM\ARMCC\include\stdarg.h)(0x60252376)
