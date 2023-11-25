@@ -4,6 +4,7 @@
 "epoch_framework\gpio.o"
 "epoch_framework\can.o"
 "epoch_framework\i2c.o"
+"epoch_framework\tim.o"
 "epoch_framework\usart.o"
 "epoch_framework\stm32f4xx_it.o"
 "epoch_framework\stm32f4xx_hal_msp.o"

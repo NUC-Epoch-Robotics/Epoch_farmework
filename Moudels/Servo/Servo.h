@@ -17,6 +17,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "stdint.h"
 #include "usart.h"
+#include "tim.h"
 #include <stdarg.h>
 /* Exported types ------------------------------------------------------------*/
 
@@ -40,7 +41,10 @@ typedef struct //舵机结构体
   uint16_t position;//舵机位置
   uint16_t angle;//舵机角度
   uint16_t time; //旋转的时间(单位ms)
-  servo_direction direction;
+  servo_direction direction;//舵机转动的方向
+  
+  TIM_HandleTypeDef htim;
+  uint8_t tim_channel;
 }servo_t;
 
 
@@ -49,6 +53,7 @@ typedef struct //舵机结构体
 
 /*******************************以下参数可更改**********************************/
 #define SERVO_USART huart7 //舵机用的串口
+#define SERVO_TIM htim2 //舵机用的定时器
 
 #define SERVO_NUM 3 //舵机数量
 
@@ -70,6 +75,8 @@ extern void servo_init(servo_t *servo,uint8_t id,servo_direction direction,uint1
 extern void move_servo(servo_t *servo,uint16_t angle);
 extern void move_servos(uint8_t Num, uint16_t Time, ...);
 extern uint16_t calculate_position(servo_t *servo);
+extern void servo_init_pwm(servo_t *servo,TIM_HandleTypeDef htim,uint8_t tim_channel,servo_direction direction);
+extern  void move_servo_pwm(servo_t *servo,uint16_t angle);
 
 #endif
 

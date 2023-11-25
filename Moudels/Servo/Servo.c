@@ -43,7 +43,7 @@ servo_t servo[SERVO_NUM];
 /* Private  function prototypes -----------------------------------------------*/
 /* Private  functions ---------------------------------------------------------*/
 
-
+/********************LSCk控制板控制多路舵机***************************************/
 
 /**
   * @brief  舵机初始化
@@ -162,4 +162,27 @@ uint16_t calculate_position(servo_t *servo)
 
 }
 
+/***************************************pwm控制舵机***************************************/
+/**
+  * @brief  舵机初始化
+  */
+void servo_init_pwm(servo_t *servo,TIM_HandleTypeDef htim,uint8_t tim_channel,servo_direction direction)
+{
+	servo->htim=htim;
+	servo->tim_channel=tim_channel;
+	servo->direction=direction;
+	
+	HAL_TIM_PWM_Start(&servo->htim,servo->tim_channel);
+}
+
+
+/**
+  * @brief  用pwm直接控制舵机
+  */
+ void move_servo_pwm(servo_t *servo,uint16_t angle)
+ {
+	servo->angle=angle;
+	calculate_position(servo);
+	__HAL_TIM_SET_COMPARE(&servo->htim,servo->tim_channel,servo->position);
+ }
 /************************ (C) COPYRIGHT 2023 EPOCH *****END OF FILE****/
