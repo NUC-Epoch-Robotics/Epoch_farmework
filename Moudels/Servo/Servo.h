@@ -77,6 +77,7 @@ extern void move_servos(uint8_t Num, uint16_t Time, ...);
 extern uint16_t calculate_position(servo_t *servo);
 extern void servo_init_pwm(servo_t *servo,TIM_HandleTypeDef htim,uint8_t tim_channel,servo_direction direction);
 extern  void move_servo_pwm(servo_t *servo,uint16_t angle);
+extern uint16_t calculate_position_pwm(servo_t *servo);
 
 #endif
 

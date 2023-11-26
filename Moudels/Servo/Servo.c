@@ -182,7 +182,32 @@ void servo_init_pwm(servo_t *servo,TIM_HandleTypeDef htim,uint8_t tim_channel,se
  void move_servo_pwm(servo_t *servo,uint16_t angle)
  {
 	servo->angle=angle;
-	calculate_position(servo);
+	calculate_position_pwm(servo);
 	__HAL_TIM_SET_COMPARE(&servo->htim,servo->tim_channel,servo->position);
  }
+
+ /**
+  * @brief  舵机位置解算,将旋转的角度转换为舵机位置
+  */
+uint16_t calculate_position_pwm(servo_t *servo)
+{
+	LIMIT(servo->angle,0,90);
+	
+	switch (servo->direction)
+	{
+		//舵机反转  0°位置为1250，90°位置为750
+		case REVERSE:
+			servo->position=1250-(float)servo->angle/90.0f*(1250-750);
+			break;
+		//舵机正转  0°位置为250，90°位置为750
+		case FORWARD:
+			servo->position=250+(float)servo->angle/90.0f*(1250-750);
+			break;
+		
+		default:
+			break;
+	}
+
+	return servo->position;
+}
 /************************ (C) COPYRIGHT 2023 EPOCH *****END OF FILE****/
